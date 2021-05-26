@@ -1,0 +1,32 @@
+/* Hamburger menu */
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.line-1 {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+.line-2 {
+  opacity: 0;
+}
+.line-3 {
+  transform: rotate(45deg) translate(-8px, -6px);
+}
+
+/* Navbar */
