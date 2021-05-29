@@ -1,0 +1,11 @@
+main {
+  position: relative;
+  min-height: 100vh;
+  background-color: #1f1f1f;
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+  main {
+    margin-top: -1px;
+  }
+}
