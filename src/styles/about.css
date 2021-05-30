@@ -1,32 +1,48 @@
 .about {
-  background-color: blue;
-  height: ;
-  position: absolute;
+  background-color: #1f1f1f;
+  height: 150vh;
+  position: relative;
   width: 100%;
 }
 
 .about .picture {
   position: absolute;
-  height: 150px;
-  width: 125px;
+  height: 170px;
+  width: 140px;
   background-color: red;
   color: white;
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, -50%);
 }
 
 .about .text-container {
   position: relative;
-  top: 30%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
 }
 
-h2 {
+.about h2 {
   font-size: 16px;
   margin-bottom: 20px;
+  color: white;
 }
 
-p {
-  font-size: 14px;
-  margin-bottom: 10px;
+.about p {
+  text-align: justify;
+  font-size: 14.5px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.about ul,
+.about li {
+  color: white;
+}
+
+.about li {
+  margin-left: 20px;
+  font-size: 14.5px;
 }

@@ -1,25 +1,27 @@
 .home {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+  background-color: #1f1f1f;
 }
 
 .home .text-container {
   position: absolute;
   display: block;
   width: 100%;
-  top: 10%;
-}
-
-.home .text-container:nth-of-type(2) {
   top: 20%;
 }
 
-h2 {
+.home .text-container:nth-of-type(2) {
+  top: 30%;
+}
+
+.home h2 {
   color: white;
   display: block;
 }
 
-p {
+.home p {
   color: white;
   font-size: 18px;
   line-height: 33px;
@@ -39,11 +41,11 @@ p {
   .home .text-container:nth-of-type(2) {
     top: 25%;
   }
-  h2 {
+  .home h2 {
     font-size: 33px;
   }
 
-  p {
+  .home p {
     font-size: 27px;
     line-height: 55px;
   }
@@ -61,11 +63,11 @@ p {
   .home .text-container:nth-of-type(2) {
     top: 28%;
   }
-  h2 {
+  .home h2 {
     font-size: 40px;
   }
 
-  p {
+  .home p {
     font-size: 30px;
     line-height: 70px;
   }
@@ -79,11 +81,11 @@ p {
   .home .text-container:nth-of-type(2) {
     top: 33%;
   }
-  h2 {
+  .home h2 {
     font-size: 40px;
   }
 
-  p {
+  .home p {
     font-size: 30px;
     line-height: 60px;
   }
@@ -103,11 +105,11 @@ p {
   .home .text-container:nth-of-type(2) {
     top: 33%;
   }
-  h2 {
+  .home h2 {
     font-size: 42px;
   }
 
-  p {
+  .home p {
     font-size: 33px;
     line-height: 60px;
   }
@@ -120,11 +122,11 @@ p {
   .home .text-container:nth-of-type(2) {
     top: 33%;
   }
-  h2 {
+  .home h2 {
     font-size: 42px;
   }
 
-  p {
+  .home p {
     font-size: 33px;
     line-height: 60px;
   }
@@ -137,11 +139,11 @@ p {
   .home .text-container:nth-of-type(2) {
     top: 33%;
   }
-  h2 {
+  .home h2 {
     font-size: 50px;
   }
 
-  p {
+  .home p {
     font-size: 38px;
     line-height: 80px;
   }
@@ -154,11 +156,11 @@ p {
   .home .text-container:nth-of-type(2) {
     top: 36%;
   }
-  h2 {
+  .home h2 {
     font-size: 65px;
   }
 
-  p {
+  .home p {
     font-size: 45px;
     line-height: 95px;
   }

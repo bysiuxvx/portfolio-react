@@ -55,7 +55,7 @@
   width: 100%;
   top: 100%;
   left: -100%;
-  transition: 0.7s;
+  transition: 0.5s;
   opacity: 0;
   background-color: #1f1f1f;
   border-right: 5px black;
@@ -68,11 +68,11 @@
   opacity: 1;
 }
 
-ul {
+.navbar ul {
   text-decoration: none;
 }
 
-li {
+.navbar li {
   list-style: none;
   margin: 10px;
   display: block;
