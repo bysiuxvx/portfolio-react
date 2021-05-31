@@ -1,8 +1,90 @@
 .projects-page {
   background-color: #1f1f1f;
-  height: 100vh;
+  height: auto;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .projects-page h2 {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.projects-block {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.projects-block:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.projects-block .projects-container {
+  position: relative;
+  right: 0;
+  background-color: white;
+  width: 95%;
+  color: #1f1f1f;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.projects-block:nth-of-type(even) .projects-container {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.projects-container img {
+  max-width: 100%;
+  height: auto;
+  padding: 8px;
+  border-top-right-radius: 50px;
+  cursor: pointer;
+}
+
+.projects-block:nth-of-type(even) .projects-container img {
+  border-top-right-radius: 0;
+  border-top-left-radius: 50px;
+}
+
+.project-name {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.projects-container h3 {
+  margin: 0 10px 10px 10px;
+}
+
+.project-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.live-demo {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 35px;
+}
+
+.github {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.projects-container p {
+  margin: 0 10px 10px 10px;
+  text-align: justify;
 }
