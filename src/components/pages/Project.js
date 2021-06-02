@@ -44,6 +44,27 @@ const Project = (props) => {
           />
         </div>
       </div>
+      <div className="project-link-container-large">
+        <h4
+          className="live-demo"
+          onClick={(event) => {
+            window.open(liveDemo, '_blank');
+          }}
+          onAuxClick={(event) => {
+            window.open(liveDemo, '_blank');
+          }}>
+          Demo
+        </h4>
+        <FaGithub
+          className="github"
+          onClick={(event) => {
+            window.open(githubURL, '_blank');
+          }}
+          onAuxClick={(event) => {
+            window.open(githubURL, '_blank');
+          }}
+        />
+      </div>
     </div>
   );
 };

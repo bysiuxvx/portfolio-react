@@ -1,18 +1,19 @@
 .projects-page {
-  background-color: #1f1f1f;
   height: auto;
   color: white;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 1366px;
 }
 
 .projects-page h2 {
   text-align: center;
-  margin: 30px auto;
+  margin: 140px 0 70px 0;
 }
 
 .projects-block {
-  width: 100%;
+  max-width: 1366px;
   height: auto;
   display: flex;
 }
@@ -23,7 +24,6 @@
 
 .projects-block .projects-container {
   position: relative;
-  right: 0;
   background-color: white;
   width: 95%;
   color: #1f1f1f;
@@ -46,6 +46,7 @@
   padding: 8px;
   border-top-right-radius: 50px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .projects-block:nth-of-type(even) .projects-container img {
@@ -69,12 +70,18 @@
   justify-content: space-evenly;
 }
 
+.project-link-container-large {
+  opacity: 0;
+  color: white;
+}
+
 .live-demo {
   display: inline-block;
   font-weight: bold;
   font-size: 20px;
   cursor: pointer;
   line-height: 35px;
+  transition: 0.7s;
 }
 
 .github {
@@ -82,9 +89,181 @@
   height: 35px;
   width: 35px;
   cursor: pointer;
+  transition: 0.7s;
 }
 
 .projects-container p {
   margin: 0 10px 10px 10px;
   text-align: justify;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .projects-page h2 {
+    font-size: 35px;
+    margin: 200px 0 120px 0;
+  }
+
+  .projects-block {
+    margin-bottom: 20px;
+  }
+
+  .projects-block .projects-container {
+    width: 75%;
+    padding: 10px;
+  }
+
+  .projects-container h3 {
+    font-size: 25px;
+  }
+
+  .projects-container p {
+    font-size: 18px;
+  }
+
+  .project-link-container {
+    margin-bottom: 10px;
+  }
+  .live-demo {
+    font-size: 25px;
+  }
+  .github {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+  .projects-container {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .projects-page h2 {
+    font-size: 35px;
+    margin: 220px 0 150px 0;
+  }
+
+  .projects-block {
+    margin-bottom: 60px;
+  }
+
+  .projects-block .projects-container {
+    width: 55%;
+    padding: 20px;
+  }
+
+  .projects-container h3 {
+    font-size: 25px;
+  }
+
+  .projects-container p {
+    font-size: 18px;
+  }
+
+  .project-link-container {
+    height: 0;
+    opacity: 0;
+  }
+
+  .project-link-container-large {
+    color: white;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 181px;
+  }
+
+  .live-demo {
+    font-size: 35px;
+    margin-bottom: 80px;
+  }
+  .github {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .projects-block .projects-container {
+    width: 65%;
+  }
+
+  .project-link-container-large {
+    padding: 190px;
+  }
+}
+
+@media (min-width: 1367px) and (orientation: landscape) {
+  .projects-block .projects-container {
+    width: 65%;
+    border-radius: 50px;
+  }
+  .projects-block:nth-of-type(even) .projects-container {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .projects-container img {
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
+  .projects-block:nth-of-type(even) .projects-container img {
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
+  .projects-container img:hover {
+    transform: scale(1.03);
+  }
+
+  .live-demo:hover {
+    animation: shake 0.7s infinite;
+    color: orange;
+  }
+  .github:hover {
+    animation: shake 0.7s infinite;
+    color: orange;
+  }
 }

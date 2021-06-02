@@ -1,12 +1,5 @@
 main {
-  position: relative;
-  height: calc(100vh - 80px);
   background-color: #1f1f1f;
-  overflow: auto;
-}
-
-@media (min-width: 1024px) and (orientation: portrait) {
-  main {
-    margin-top: -1px;
-  }
+  display: flex;
+  justify-content: center;
 }

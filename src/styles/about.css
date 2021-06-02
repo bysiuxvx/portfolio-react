@@ -1,8 +1,9 @@
 .about {
   background-color: #1f1f1f;
-  height: 150vh;
+  min-height: 100vh;
   position: relative;
-  width: 100%;
+  max-width: 600px;
+  overflow: auto;
 }
 
 .about .picture {
@@ -12,16 +13,16 @@
   background-color: red;
   color: white;
   left: 50%;
-  top: 12%;
+  top: 25%;
   transform: translate(-50%, -50%);
 }
 
 .about .text-container {
   position: relative;
-  top: 56%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  padding: 0 15px 30px 15px;
 }
 
 .about h2 {
