@@ -68,7 +68,8 @@ const About = () => {
             of pleasure I haven't felt for a long time. The only time I get a
             little bit frustrated is when I can't align some things in the
             layout. Conceptualizing and styling this page probably took me
-            longer than I can admit. ¯\_( ° -°)_/¯
+            longer than I can admit.{' '}
+            <span style={{ whiteSpace: 'nowrap' }}>¯\_( ° -°)_/¯</span>
           </p>
           <p>
             My free time I either spend relaxing with my dog, learning something
