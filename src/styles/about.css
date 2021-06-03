@@ -27,6 +27,10 @@
   color: white;
 }
 
+.birthday {
+  animation: glowing 3s infinite linear;
+}
+
 .about p {
   text-align: justify;
   font-size: 14.5px;
@@ -44,7 +48,22 @@
   font-size: 14.5px;
 }
 
+@keyframes glowing {
+  0% {
+    color: white;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: white;
+  }
+}
+
 @media (min-width: 768px) and (orientation: portrait) {
+  .about h2 {
+    font-size: 22px;
+  }
   .about p {
     font-size: 15px;
   }
@@ -55,5 +74,54 @@
   .about li {
     margin-left: 20px;
     font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+  .about h2 {
+    font-size: 28px;
+  }
+  .about p {
+    font-size: 16.5px;
+  }
+  .about ul {
+    font-size: 24px;
+  }
+  .about li {
+    margin-left: 20px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .about h2 {
+    font-size: 22px;
+  }
+  .about p {
+    font-size: 15px;
+  }
+
+  .about ul {
+    font-size: 17px;
+  }
+  .about li {
+    margin-left: 20px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .about h2 {
+    font-size: 28px;
+  }
+  .about p {
+    font-size: 16.5px;
+  }
+  .about ul {
+    font-size: 24px;
+  }
+  .about li {
+    margin-left: 20px;
+    font-size: 18px;
   }
 }

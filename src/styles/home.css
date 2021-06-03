@@ -9,11 +9,11 @@
   position: absolute;
   display: block;
   width: 100%;
-  top: 20%;
+  top: 26%;
 }
 
 .home .text-container:nth-of-type(2) {
-  top: 30%;
+  top: 33%;
 }
 
 .home h2 {
@@ -35,11 +35,11 @@
 
 @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
   .home .text-container {
-    top: 15%;
+    top: 19%;
   }
 
   .home .text-container:nth-of-type(2) {
-    top: 25%;
+    top: 28%;
   }
   .home h2 {
     font-size: 33px;

@@ -44,7 +44,6 @@ const About = () => {
             I've been working in IT for the last 8 years on several positions,
             from local support to IT/system admin.
           </p>
-
           <p>
             My reasons for wanting to become a developer are simple - I would
             love to work creatively, to take part in building things, something
@@ -80,7 +79,6 @@ const About = () => {
             electronics and taught myself through tutorials to build small
             devices like guitar effects - most of them worked...
           </p>
-
           <ul>
             <strong>Interests:</strong>
             <li>Music and making music</li>
