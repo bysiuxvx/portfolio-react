@@ -11,7 +11,7 @@ function Page() {
   return (
     <main>
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/home" exact component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/projects" component={ProjectsList} />

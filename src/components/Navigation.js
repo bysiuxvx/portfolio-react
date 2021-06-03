@@ -8,7 +8,7 @@ const Navigation = () => {
   const handleSetMenu = () => setMenu(!menu);
 
   const navList = [
-    { name: 'Home', path: '/', exact: true },
+    { name: 'Home', path: '/home', exact: true },
     { name: 'About', path: '/about' },
     { name: 'Projects', path: '/projects' },
     { name: 'Contact', path: '/contact' },
