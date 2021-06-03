@@ -6,7 +6,7 @@ import Page from './Page';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/React">
         <Navigation />
         <Page />
       </Router>
