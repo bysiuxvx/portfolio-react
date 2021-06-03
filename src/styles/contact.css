@@ -85,6 +85,8 @@ textarea:focus {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-family: serif;
+  line-height: 50px;
 }
 
 .contact-details h4 {
@@ -149,6 +151,45 @@ textarea:focus {
     border-radius: 50px;
   }
 }
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .contact-form {
+    width: 400px;
+  }
+  .contact-form input {
+    height: 60px;
+  }
+  .contact-form input,
+  textarea {
+    margin: 20px auto;
+    font-size: 18px;
+  }
+  .contact-buttons {
+    height: 45px;
+    width: 75px;
+    border-radius: 50px;
+  }
+  .contact-buttons:hover {
+    background-color: #fff;
+    animation: shake 1s infinite;
+    color: #1f1f1f;
+  }
+
+  .contact-details label {
+    margin: 10px 0;
+  }
+
+  .contact-details h4 {
+    color: #666;
+    cursor: pointer;
+  }
+
+  .contact-details h4:hover {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ddd;
+    animation: shake 1s infinite;
+  }
+}
 
 @media screen and (min-width: 1366px) and (orientation: landscape) {
   .contact-form {
@@ -171,6 +212,10 @@ textarea:focus {
     background-color: #fff;
     animation: shake 1s infinite;
     color: #1f1f1f;
+  }
+
+  .contact-details label {
+    margin: 10px 0;
   }
 
   .contact-details h4 {
