@@ -1,7 +1,6 @@
 .about {
   background-color: #1f1f1f;
   height: auto;
-  position: relative;
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -9,12 +8,20 @@
   align-items: center;
 }
 
-.about .picture {
-  height: 170px;
-  width: 140px;
-  background-color: red;
-  color: white;
-  margin: 120px 0 60px 0;
+.about-wrapper {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .picture-container {
+  margin: 50px 0 50px 0;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
 }
 
 .about .text-container {
@@ -76,10 +83,18 @@
     font-size: 15px;
   }
 }
+@media (min-width: 769px) and (orientation: portrait) {
+  /* .about .picture-container {
+    margin: 0 0 50px 0;
+  } */
+}
 
 @media (min-width: 1024px) and (orientation: portrait) {
+  .about .picture-container {
+    margin: 0 0 50px 0;
+  }
   .about h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
   .about p {
     font-size: 16.5px;
@@ -95,10 +110,10 @@
 
 @media (min-width: 1024px) and (orientation: landscape) {
   .about h2 {
-    font-size: 22px;
+    font-size: 26px;
   }
   .about p {
-    font-size: 15px;
+    font-size: 16.5px;
   }
 
   .about ul {
@@ -106,13 +121,13 @@
   }
   .about li {
     margin-left: 20px;
-    font-size: 15px;
+    font-size: 16.5px;
   }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {
   .about h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
   .about p {
     font-size: 16.5px;

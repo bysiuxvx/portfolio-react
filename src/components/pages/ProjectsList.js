@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../styles/projects.css';
 import Project from './Project';
-import toDoApp from '../../project pictures/todoapp_fullsize.jpg';
-import weatherApp from '../../project pictures/weatherapp_fullsize.jpg';
-import passwordGenerator from '../../project pictures/passwordgenerator_fullsize.jpg';
+import toDoApp from '../../project_pictures/todoapp_fullsize.jpg';
+import weatherApp from '../../project_pictures/weatherapp_fullsize.jpg';
+import passwordGenerator from '../../project_pictures/passwordgenerator_fullsize.jpg';
 
 const ProjectsList = () => {
   const projects = [
