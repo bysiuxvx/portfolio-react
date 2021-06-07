@@ -49,13 +49,13 @@ const About = () => {
             <h2>Hi again, my name is Patryk</h2>
             <p>
               I've been working in IT for the last 8 years on several positions,
-              from local support to IT/system admin.
+              from local / remote support to IT/system admin.
             </p>
             <p>
               My reasons for wanting to become a developer are simple - I would
               love to work creatively, to take part in building things,
               something I never had the chance to do in my career. My previous
-              work concentrated around maintaining systems that already exist.{' '}
+              work focused on maintaining systems that already exist.{' '}
             </p>
             <p>
               I started programming late into 2020 during the pandemic because I
@@ -76,7 +76,7 @@ const About = () => {
               type of pleasure I haven't felt for a long time. The only time I
               get a little bit frustrated is when I can't align some things in
               the layout. Conceptualizing and styling this page probably took me
-              longer than I can admit.{' '}
+              longer than writing the logic..{' '}
               <span style={{ whiteSpace: 'nowrap' }}>¯\_( ° -°)_/¯</span>
             </p>
             <p>
@@ -88,13 +88,7 @@ const About = () => {
               interested in electronics and taught myself through tutorials to
               build small devices like guitar effects - most of them worked...
             </p>
-            <ul>
-              <strong>Interests:</strong>
-              <li>Music and making music</li>
-              <li>Collecting vinyl records</li>
-              <li>Literature and films with dystopian themes</li>
-              <li>Programming of course!</li>
-            </ul>
+            <h3>Come on, let me hear from you!</h3>
           </div>
         </div>
       </div>

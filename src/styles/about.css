@@ -25,13 +25,16 @@
 }
 
 .about .text-container {
-  padding: 0 15px 30px 15px;
+  padding: 0 15px 40px 15px;
+}
+
+.about * {
+  color: white;
 }
 
 .about h2 {
   font-size: 20px;
   margin-bottom: 20px;
-  color: white;
 }
 
 .birthday {
@@ -42,12 +45,9 @@
   text-align: justify;
   font-size: 14.5px;
   margin-bottom: 15px;
-  color: white;
 }
 
-.about ul,
-.about li {
-  color: white;
+.about h2 {
 }
 
 .about li {
@@ -82,11 +82,6 @@
     margin-left: 20px;
     font-size: 15px;
   }
-}
-@media (min-width: 769px) and (orientation: portrait) {
-  /* .about .picture-container {
-    margin: 0 0 50px 0;
-  } */
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
