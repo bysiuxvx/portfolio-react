@@ -8,31 +8,17 @@ const About = () => {
 
   const nowDate = new Date().getTime();
 
-  let interval = useRef();
-
   const bDayCountdown = () => {
     const bDay = new Date('2021-07-16 00:00:00').getTime();
-
-    interval = setInterval(() => {
-      const now = new Date().getTime();
-      const difference = bDay - now;
-
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-
-      setDaysLeft(days);
-
-      if (difference > 0) {
-        // FYI - no need to refresh it, I only want to update the time once, I only need the day :)
-        clearInterval(interval.current);
-      }
-    }, 10);
+    const now = new Date().getTime();
+    const difference = bDay - now;
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    setDaysLeft(days);
   };
 
   useEffect(() => {
     bDayCountdown();
-    return () => {
-      clearInterval(interval.current);
-    };
+    return () => {};
   });
 
   return (
