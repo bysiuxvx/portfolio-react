@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import moduleName from 'module';
+import moment from 'moment';
+import 'moment-timezone';
 import picture_main from '../../about_pictures/img-7451.jpg';
 import '../../styles/about.css';
 
@@ -9,8 +10,13 @@ const About = () => {
   const nowDate = new Date().getTime();
 
   const bDayCountdown = () => {
-    const bDay = new Date('2021-07-16 00:00:00').getTime();
-    const now = new Date().getTime();
+    // const bDay = new Date('2021-07-16 00:00:00').getTime();
+    // const now = new Date().getTime();
+    // const difference = bDay - now;
+
+    const bDay = moment('2021-07-16');
+    const now = moment();
+
     const difference = bDay - now;
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     setDaysLeft(days);
