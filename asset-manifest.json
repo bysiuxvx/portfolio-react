@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "./static/css/main.6771c338.chunk.css",
-    "main.js": "./static/js/main.9ba224a3.chunk.js",
-    "main.js.map": "./static/js/main.9ba224a3.chunk.js.map",
+    "main.css": "./static/css/main.07be04ce.chunk.css",
+    "main.js": "./static/js/main.9b77b20a.chunk.js",
+    "main.js.map": "./static/js/main.9b77b20a.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.39dbb347.js",
     "runtime-main.js.map": "./static/js/runtime-main.39dbb347.js.map",
-    "static/js/2.4229eae3.chunk.js": "./static/js/2.4229eae3.chunk.js",
-    "static/js/2.4229eae3.chunk.js.map": "./static/js/2.4229eae3.chunk.js.map",
+    "static/js/2.037019fd.chunk.js": "./static/js/2.037019fd.chunk.js",
+    "static/js/2.037019fd.chunk.js.map": "./static/js/2.037019fd.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.6771c338.chunk.css.map": "./static/css/main.6771c338.chunk.css.map",
-    "static/js/2.4229eae3.chunk.js.LICENSE.txt": "./static/js/2.4229eae3.chunk.js.LICENSE.txt",
+    "static/css/main.07be04ce.chunk.css.map": "./static/css/main.07be04ce.chunk.css.map",
+    "static/js/2.037019fd.chunk.js.LICENSE.txt": "./static/js/2.037019fd.chunk.js.LICENSE.txt",
     "static/media/passwordgenerator_fullsize.0042cfa0.jpg": "./static/media/passwordgenerator_fullsize.0042cfa0.jpg",
+    "static/media/this.20bbdbba.jpg": "./static/media/this.20bbdbba.jpg",
     "static/media/todoapp_fullsize.bab17aaf.jpg": "./static/media/todoapp_fullsize.bab17aaf.jpg",
     "static/media/weatherapp_fullsize.14ec4b39.jpg": "./static/media/weatherapp_fullsize.14ec4b39.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.39dbb347.js",
-    "static/js/2.4229eae3.chunk.js",
-    "static/css/main.6771c338.chunk.css",
-    "static/js/main.9ba224a3.chunk.js"
+    "static/js/2.037019fd.chunk.js",
+    "static/css/main.07be04ce.chunk.css",
+    "static/js/main.9b77b20a.chunk.js"
   ]
 }
