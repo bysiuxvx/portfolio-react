@@ -10,7 +10,7 @@ const ProjectsList = () => {
   const projects = [
     {
       name: 'To Do List',
-      description: `My first React project. Building this application from scratch to final state took me probably around 30 hours over the course of around a week. I have spent a big portion of the time on styling the app, because I didn't like the initial version, and I changed it 2-3 times. I also experimented with different libraries to make the application as fun as possible.`,
+      description: `My first React project. Building this application from scratch to final state took me probably around 30 hours over the course of around a week. I have spent a big portion of the time on styling the app, because I didn't like the initial version, and I changed it 2-3 times. I also experimented with different libraries along the way.`,
       image: toDoApp,
       imageAlt: 'To Do list app picture',
       githubURL: 'https://github.com/bysiuxvx/ToDoApp',
@@ -19,7 +19,7 @@ const ProjectsList = () => {
     {
       name: 'Weather app',
       description:
-        'This was the first project I was really satisfied with. Looking back it is very simple, but I like the results, although everyone has different preferences when it comes to UI. It runs the API from OpenWeatherMap.',
+        'This was the first project I was really satisfied with. Looking back at it, it is very simple, but I like the results, although everyone has different preferences when it comes to UI. It runs the API of OpenWeatherMap.',
       image: weatherApp,
       imageAlt: 'Weather app picture',
       githubURL: 'https://github.com/bysiuxvx/weather-app',

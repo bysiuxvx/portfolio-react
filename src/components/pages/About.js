@@ -68,7 +68,8 @@ const About = () => {
               <span style={{ textDecoration: 'underline' }}>
                 offer me a job
               </span>{' '}
-              in order to help me with this goal!
+              in order to help me with this goal! Though my main goal is to bea
+              able to get knowledge on a full time basis.
             </p>
             <p>
               Programming is giving me huge amounts of fun and satisfaction.
