@@ -1,5 +1,4 @@
 .about {
-  background-color: #1f1f1f;
   height: auto;
   max-width: 600px;
   display: flex;
@@ -15,6 +14,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .about .picture-container {
@@ -45,9 +45,6 @@
   text-align: justify;
   font-size: 14.5px;
   margin-bottom: 15px;
-}
-
-.about h2 {
 }
 
 .about li {

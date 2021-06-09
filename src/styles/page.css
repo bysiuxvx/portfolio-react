@@ -4,4 +4,28 @@ main {
   justify-content: center;
   min-height: calc(100vh - 80px);
   margin-top: 80px;
+  overflow: hidden;
+  z-index: -10;
+}
+
+#tsparticles {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+}
+
+@media (min-width: 1367px) and (orientation: landscape) {
 }

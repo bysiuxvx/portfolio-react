@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  z-index: 10;
 }
 
 .contact-form {
@@ -13,7 +14,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1f1f1f;
 }
 
 .contact-form input {
@@ -33,7 +33,7 @@ textarea {
   font-size: 16px;
   outline: none;
   border: none;
-  background-color: #1f1f1f;
+  background-color: transparent;
   resize: none;
   border-bottom: 1px solid #666;
   color: white;
@@ -73,6 +73,7 @@ textarea:focus {
   justify-content: center;
   align-items: center;
   margin-top: -50px;
+  z-index: 10;
 }
 
 .contact-details label {

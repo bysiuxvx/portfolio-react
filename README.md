@@ -13,9 +13,10 @@ This is my own, very humble portfolio that I made in React. I am not a very good
 - react-icons
 - Typewriter
 - Moment.js
+- React-particles
 
 ## things I learned
 
--I was having issues with the BrowserRouter and the homepage I set up in package.json, there were some issues with switching between pages. I instead used HashRouter. Maybe this is not the best way to deal with this problem, but it's one more thing I learned about ;)
+- I was having issues with the BrowserRouter and the homepage I set up in package.json, there were some issues with switching between pages. I instead used HashRouter. Maybe this is not the best way to deal with this problem, but it's one more thing I learned about ;)
 
--When I was finishing up I noticed that in the About section on my iOS device I was getting a NaN instead of the number of days left. I learned how different systems handle timezones. I removed the logic that I wrote, and handled it with Moment.js.
+- When I was finishing up I noticed that in the About section on my iOS device I was getting a NaN instead of the number of days left. I learned how different systems handle timezones. I removed the logic that I wrote, and handled it with Moment.js.
