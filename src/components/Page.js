@@ -28,7 +28,7 @@ const Page = () => {
               value: 35,
             },
             size: {
-              value: 2,
+              value: 1,
             },
           },
           interactivity: {
