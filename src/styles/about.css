@@ -45,6 +45,7 @@
   text-align: justify;
   font-size: 14.5px;
   margin-bottom: 15px;
+  line-height: 25px;
 }
 
 .about li {
@@ -123,6 +124,7 @@
   }
   .about p {
     font-size: 16.5px;
+    line-height: 28px;
   }
   .about ul {
     font-size: 24px;
