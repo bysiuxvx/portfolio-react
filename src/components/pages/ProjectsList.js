@@ -13,8 +13,8 @@ const ProjectsList = () => {
       description: `My first React project. Building this application from scratch to final state took me probably around 30 hours over the course of around a week. I have spent a big portion of the time on styling the app, because I didn't like the initial version, and I changed it 2-3 times. I also experimented with different libraries along the way.`,
       image: toDoApp,
       imageAlt: 'To Do list app picture',
-      githubURL: 'https://github.com/bysiuxvx/ToDoApp',
-      liveDemo: 'https://bysiuxvx.github.io/ToDoApp/',
+      githubURL: 'https://github.com/bysiuxvx/ToDoApp-react',
+      liveDemo: 'https://bysiuxvx.github.io/ToDoApp-react/',
     },
     {
       name: 'Weather app',
