@@ -5,9 +5,18 @@ import toDoApp from '../../project_pictures/todoapp_fullsize.jpg';
 import weatherApp from '../../project_pictures/weatherapp_fullsize.jpg';
 import passwordGenerator from '../../project_pictures/passwordgenerator_fullsize.jpg';
 import thisPic from '../../project_pictures/this.jpg';
+import movieBrowser from '../../project_pictures/movie_browser.jpg';
 
 const ProjectsList = () => {
   const projects = [
+    {
+      name: 'Movie Browser - work in progress',
+      description: `A simple movie browser running the OMDB API created in React. It is working properly already, although the styling is not yet responsive. I first need to figure out how I want this app to look like in the end. Also I am planning to add a favorites list, that will be displayed in a retractable tab.`,
+      image: movieBrowser,
+      imageAlt: 'Movie browser picture',
+      githubURL: 'https://github.com/bysiuxvx/movie-browser-react',
+      liveDemo: 'https://movie-browser-react.herokuapp.com/',
+    },
     {
       name: 'To Do List',
       description: `My first React project. Building this application from scratch to final state took me probably around 30 hours over the course of around a week. I have spent a big portion of the time on styling the app, because I didn't like the initial version, and I changed it 2-3 times. I also experimented with different libraries along the way.`,
@@ -51,7 +60,7 @@ const ProjectsList = () => {
 
   return (
     <div className="projects-page">
-      <h2>My favorite projects</h2>
+      <h2>Selected stuff that I made</h2>
       {projectsList}
     </div>
   );
