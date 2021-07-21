@@ -4,7 +4,7 @@ This is my own, very humble portfolio that I made in React. I am not a very good
 
 ## Demo
 
-[Live demo of the app](https://portfolio-pb.herokuapp.com/#/)
+[Live demo of the app](https://pbyszek.com)
 
 ## Technologies used
 
