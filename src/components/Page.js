@@ -1,23 +1,27 @@
-import React, { useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { useHistory } from 'react-router';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import ProjectsList from './pages/ProjectsList';
-import ErrorPage from './pages/ErrorPage';
-import '../styles/page.css';
-import Particles from 'react-particles-js';
+import React, { useEffect, useState } from "react"
+import { Route, Switch } from "react-router-dom"
+import { useHistory } from "react-router"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Contact from "./pages/Contact"
+import ProjectsList from "./pages/ProjectsList"
+import ErrorPage from "./pages/ErrorPage"
+import "../styles/page.css"
+import Particles from "react-particles-js"
 
 const Page = () => {
-  const history = useHistory();
+  const [homeDisplayed, setHomeDisplayed] = useState(false)
+  const history = useHistory()
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      history.push('/about');
-    }, 22000);
-    return () => clearTimeout(timeoutId);
-  }, [history]);
+    if (homeDisplayed === false) {
+      setTimeout(() => {
+        history.push("/about")
+      }, 22000)
+
+      return () => setHomeDisplayed(true)
+    } else return
+  })
 
   return (
     <main>
@@ -35,7 +39,7 @@ const Page = () => {
             events: {
               onhover: {
                 enable: true,
-                mode: 'repulse',
+                mode: "repulse",
               },
             },
           },
@@ -50,7 +54,7 @@ const Page = () => {
         <Route component={ErrorPage} />
       </Switch>
     </main>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
