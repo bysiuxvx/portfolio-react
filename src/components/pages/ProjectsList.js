@@ -1,11 +1,11 @@
 import React from "react"
-import "../../styles/projects.css"
 import Project from "./Project"
 import toDoApp from "../../project_pictures/todoapp_fullsize.jpg"
 import weatherApp from "../../project_pictures/weatherapp_fullsize.jpg"
 import passwordGenerator from "../../project_pictures/passwordgenerator_fullsize.jpg"
 import thisPic from "../../project_pictures/this.jpg"
 import movieBrowser from "../../project_pictures/movie_browser.jpg"
+import { motion } from "framer-motion"
 
 const ProjectsList = () => {
   const projects = [
@@ -59,10 +59,16 @@ const ProjectsList = () => {
   ))
 
   return (
-    <div className="projects-page">
+    <motion.div
+      className="projects-page"
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, y: "-320vh" }}
+      transition={{ duration: 0.7 }}
+    >
       <h2>Selected stuff that I made</h2>
       {projectsList}
-    </div>
+    </motion.div>
   )
 }
 

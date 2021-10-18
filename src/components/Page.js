@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react"
-import { Route, Switch } from "react-router-dom"
+import { Route, Switch, useLocation } from "react-router-dom"
 import { useHistory } from "react-router"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import ProjectsList from "./pages/ProjectsList"
 import ErrorPage from "./pages/ErrorPage"
-import "../styles/page.css"
 import Particles from "react-particles-js"
+import { AnimatePresence } from "framer-motion"
 
 const Page = () => {
   const [homeDisplayed, setHomeDisplayed] = useState(false)
   const history = useHistory()
 
+  const location = useLocation()
+
   useEffect(() => {
     if (homeDisplayed === false) {
       setTimeout(() => {
         history.push("/about")
+        setHomeDisplayed(true)
       }, 22000)
-
-      return () => setHomeDisplayed(true)
     } else return
   })
 
@@ -46,13 +47,15 @@ const Page = () => {
         }}
         style={{}}
       />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/projects" component={ProjectsList} />
-        <Route component={ErrorPage} />
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/projects" component={ProjectsList} />
+          <Route component={ErrorPage} />
+        </Switch>
+      </AnimatePresence>
     </main>
   )
 }

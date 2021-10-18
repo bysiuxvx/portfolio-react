@@ -1,7 +1,7 @@
-import { HashRouter as Router } from 'react-router-dom';
-import Navigation from './Navigation';
-import Page from './Page';
-import '../styles/app.css';
+import { HashRouter as Router } from "react-router-dom"
+import Navigation from "./Navigation"
+import Page from "./Page"
+import "../styles/style.scss"
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Page />
       </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

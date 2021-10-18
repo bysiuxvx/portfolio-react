@@ -1,0 +1,821 @@
+// @import "./style-settings";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.App {
+  overflow: hidden;
+}
+//navigation
+
+$phone: "1366px";
+
+.navbar {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background-color: black;
+  box-shadow: 0 0 20px black;
+  z-index: 100;
+  @media (min-width: 1024px) and (orientation: landscape) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  li {
+    list-style: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .menu-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    @media (min-width: 1024px) and (orientation: landscape) {
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: 0.5s;
+    background-color: white;
+  }
+
+  .line-1 {
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+  .line-2 {
+    opacity: 0;
+  }
+  .line-3 {
+    transform: rotate(45deg) translate(-8px, -6px);
+  }
+
+  .navbar-container {
+    height: 80px;
+    max-width: 1400px;
+    @media (min-width: 1024px) and (orientation: landscape) {
+      margin-left: 500px;
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 100%;
+    left: -100%;
+    transition: 0.5s;
+    opacity: 0;
+    border-right: 5px black;
+    box-shadow: inset 0 0 5px black;
+    z-index: 100;
+    background-color: #1f1f1f;
+    @media (min-width: 1024px) and (orientation: landscape) {
+      flex-direction: row;
+      position: relative;
+      top: auto;
+      left: auto;
+      height: 100%;
+      width: 100%;
+      opacity: 1;
+      background-color: black;
+      box-shadow: none;
+      li {
+        cursor: auto;
+      }
+    }
+  }
+
+  .nav-menu.active {
+    left: 0;
+    top: 100%;
+    opacity: 1;
+    height: calc(100vh - 80px);
+    z-index: 100;
+    @media (min-width: 1024px) and (orientation: landscape) {
+      left: 0;
+      top: 0;
+      opacity: 1;
+      height: 80px;
+      width: auto;
+    }
+  }
+
+  .navbar ul {
+    text-decoration: none;
+  }
+
+  .li-item {
+    font-size: 30px;
+    text-decoration: none;
+    height: 100%;
+    display: block;
+    padding: 30px;
+    font-weight: 700;
+    color: white;
+    @media (min-width: 1024px) and (orientation: landscape) {
+      font-size: 20px;
+      text-decoration: none;
+      width: 100px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      font-weight: 700;
+      color: white;
+      margin: 0 50px;
+      height: 80px;
+      transition: 0.5s;
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+  }
+  .li-item.active {
+    @media (min-width: 1024px) and (orientation: landscape) {
+      border-bottom: 2px solid white;
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+
+//page
+
+main {
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+  overflow: hidden;
+  z-index: -10;
+
+  #tsparticles {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+//home
+
+.home {
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+
+  .text-container {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 26%;
+    @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+      top: 19%;
+    }
+    @media (min-width: 1024px) and (orientation: portrait) {
+      top: 20%;
+      left: 12%;
+    }
+    @media (orientation: landscape) and (min-width: 1024px) {
+      top: 19%;
+      left: 12%;
+    }
+    @media (orientation: landscape) and (min-width: 1366px) {
+      top: 19%;
+      left: 15%;
+    }
+    @media (orientation: landscape) and (min-width: 1600px) {
+      top: 21%;
+    }
+    @media (orientation: landscape) and (min-width: 1920px) {
+      left: 22%;
+    }
+    @media (orientation: landscape) and (min-width: 2560px) {
+      top: 25%;
+    }
+    @media (orientation: landscape) and (min-width: 3840px) {
+      top: 29%;
+      left: 22%;
+    }
+  }
+
+  .text-container:nth-of-type(2) {
+    top: 33%;
+    @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+      top: 28%;
+    }
+    .home .text-container:nth-of-type(2) {
+      top: 28%;
+    }
+    @media (min-width: 1024px) and (orientation: portrait) {
+      top: 28%;
+    }
+    @media (orientation: landscape) and (min-width: 1024px) {
+      top: 33%;
+    }
+    @media (orientation: landscape) and (min-width: 3840px) {
+      top: 36%;
+    }
+  }
+
+  h2 {
+    color: white;
+    display: block;
+    @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+      font-size: 33px;
+    }
+    @media (min-width: 1024px) and (orientation: portrait) {
+      font-size: 40px;
+    }
+    @media (orientation: landscape) and (min-width: 1024px) {
+      font-size: 40px;
+    }
+    @media (orientation: landscape) and (min-width: 1600px) {
+      font-size: 42px;
+    }
+    @media (orientation: landscape) and (min-width: 2560px) {
+      font-size: 50px;
+    }
+    @media (orientation: landscape) and (min-width: 3840px) {
+      font-size: 65px;
+    }
+  }
+
+  p {
+    color: white;
+    font-size: 18px;
+    line-height: 33px;
+    @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+      font-size: 27px;
+      line-height: 55px;
+    }
+    @media (min-width: 1024px) and (orientation: portrait) {
+      font-size: 30px;
+      line-height: 60px;
+    }
+    @media (orientation: landscape) and (min-width: 1600px) {
+      font-size: 33px;
+    }
+    @media (orientation: landscape) and (min-width: 2560px) {
+      font-size: 38px;
+      line-height: 80px;
+    }
+    @media (orientation: landscape) and (min-width: 3840px) {
+      font-size: 45px;
+      line-height: 95px;
+    }
+  }
+
+  .Typewriter {
+    height: 100%;
+    width: 100%;
+    padding-left: 25px;
+    @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+      padding-left: 130px;
+    }
+  }
+}
+
+//about
+
+.about {
+  height: auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  @media (min-width: 1366px) and (orientation: landscape) {
+    max-width: 750px;
+  }
+
+  .about-wrapper {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .picture-container {
+    margin: 50px 0 50px 0;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    @media (min-width: 1024px) and (orientation: portrait) {
+      margin: 0 0 50px 0;
+    }
+  }
+
+  .text-container {
+    padding: 0 15px 40px 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    @media (min-width: 768px) and (orientation: portrait) {
+      font-size: 22px;
+    }
+    @media (min-width: 1024px) and (orientation: portrait) {
+      font-size: 26px;
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      font-size: 26px;
+    }
+  }
+
+  p {
+    text-align: justify;
+    font-size: 14.5px;
+    margin-bottom: 15px;
+    line-height: 25px;
+    @media (min-width: 768px) and (orientation: portrait) {
+      font-size: 15px;
+    }
+    @media (min-width: 1024px) and (orientation: portrait) {
+      font-size: 16.5px;
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      font-size: 16.5px;
+    }
+    @media (min-width: 1366px) and (orientation: landscape) {
+      line-height: 28px;
+    }
+  }
+
+  ul {
+    @media (min-width: 768px) and (orientation: portrait) {
+      font-size: 17px;
+    }
+    @media (min-width: 1024px) and (orientation: portrait) {
+      font-size: 24px;
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      font-size: 17px;
+    }
+    @media (min-width: 1366px) and (orientation: landscape) {
+      font-size: 24px;
+    }
+  }
+
+  li {
+    margin-left: 20px;
+    font-size: 14.5px;
+    @media (min-width: 768px) and (orientation: portrait) {
+      font-size: 15px;
+    }
+    @media (min-width: 1024px) and (orientation: portrait) {
+      font-size: 18px;
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      font-size: 16.5px;
+    }
+    @media (min-width: 1366px) and (orientation: landscape) {
+      font-size: 18px;
+    }
+  }
+}
+
+//projects
+
+.projects-page {
+  height: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1366px;
+  z-index: 10;
+
+  h2 {
+    text-align: center;
+    margin: 70px auto;
+    @media (min-width: 768px) and (orientation: portrait) {
+      font-size: 35px;
+      margin: 120px auto;
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      font-size: 35px;
+      margin: 150px auto;
+    }
+  }
+
+  .projects-block {
+    max-width: 1366px;
+    height: auto;
+    display: flex;
+    @media (min-width: 768px) and (orientation: portrait) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .projects-block:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+
+  .projects-container {
+    position: relative;
+    background-color: white;
+    width: 95%;
+    color: #1f1f1f;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    @media (min-width: 768px) and (orientation: portrait) {
+      width: 75%;
+      padding: 10px;
+    }
+    @media (min-width: 1024px) and (orientation: portrait) {
+      padding: 20px;
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      width: 55%;
+      padding: 20px;
+      @media (min-width: 1366px) and (orientation: landscape) {
+        border-radius: 50px;
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      padding: 8px;
+      border-top-right-radius: 50px;
+      cursor: pointer;
+      transition: 0.5s;
+      @media (min-width: 1366px) and (orientation: landscape) {
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+    h3 {
+      margin: 0 10px 10px 10px;
+      @media (min-width: 768px) and (orientation: portrait) {
+        font-size: 25px;
+      }
+      @media (min-width: 1024px) and (orientation: landscape) {
+        font-size: 25px;
+      }
+    }
+    p {
+      margin: 0 10px 10px 10px;
+      text-align: justify;
+      @media (min-width: 768px) and (orientation: portrait) {
+        font-size: 18px;
+      }
+      @media (min-width: 1024px) and (orientation: landscape) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .projects-block:nth-of-type(even) {
+    .projects-container {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      @media (min-width: 1366px) and (orientation: landscape) {
+        border-radius: 50px;
+      }
+    }
+    img {
+      border-top-right-radius: 0;
+      border-top-left-radius: 50px;
+      @media (min-width: 1366px) and (orientation: landscape) {
+        border-top-right-radius: 50px;
+      }
+    }
+  }
+
+  .project-name {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .project-link-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @media (min-width: 768px) and (orientation: portrait) {
+      margin-bottom: 10px;
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      height: 0;
+      opacity: 0;
+    }
+    @media (min-width: 1366px) and (orientation: landscape) {
+      width: 65%;
+      border-radius: 50px;
+    }
+  }
+
+  .project-link-container-large {
+    opacity: 0;
+    color: white;
+    @media (min-width: 1024px) and (orientation: landscape) {
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: auto;
+      justify-content: center;
+      align-items: center;
+      padding: 181px;
+    }
+    @media (min-width: 1366px) and (orientation: landscape) {
+      padding: 190px;
+    }
+  }
+
+  .live-demo {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 35px;
+    transition: 0.7s;
+    @media (min-width: 768px) and (orientation: portrait) {
+      font-size: 25px;
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      font-size: 35px;
+      margin-bottom: 80px;
+    }
+    @media (min-width: 1366px) and (orientation: landscape) {
+      &:hover {
+        animation: shake 0.7s infinite;
+        color: orange;
+      }
+    }
+  }
+
+  .github {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    transition: 0.7s;
+    @media (min-width: 768px) and (orientation: portrait) {
+      height: 35px;
+      width: 35px;
+    }
+    @media (min-width: 1024px) and (orientation: landscape) {
+      height: 70px;
+      width: 70px;
+    }
+    @media (min-width: 1366px) and (orientation: landscape) {
+      &:hover {
+        animation: shake 0.7s infinite;
+        color: orange;
+      }
+    }
+  }
+}
+
+//contact
+
+.contact-page {
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 10;
+
+  .contact-form {
+    height: 400px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 1024px) and (orientation: portrait) {
+      width: 480px;
+    }
+    @media (min-width: 1366px) and (orientation: landscape) {
+      width: 480px;
+    }
+    @media handheld and (min-width: 1366px) and (orientation: landscape) {
+      width: 480px;
+    }
+    @media screen and (min-width: 1024px) and (orientation: landscape) {
+      width: 400px;
+    }
+    input {
+      height: 50px;
+      margin: 10px auto;
+      @media (min-width: 1024px) and (orientation: portrait) {
+        height: 60px;
+      }
+      @media (min-width: 1366px) and (orientation: landscape) {
+        height: 60px;
+      }
+      @media handheld and (min-width: 1366px) and (orientation: landscape) {
+        height: 60px;
+      }
+      @media screen and (min-width: 1024px) and (orientation: landscape) {
+        height: 60px;
+      }
+    }
+    textarea {
+      height: 80px;
+      margin: 10px auto;
+    }
+    input,
+    textarea {
+      width: 90%;
+      padding: 6px;
+      font-size: 16px;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      resize: none;
+      border-bottom: 1px solid #666;
+      color: white;
+      transition: 0.7s;
+      &:focus {
+        border-bottom: 1px solid white;
+      }
+      @media (min-width: 1024px) and (orientation: portrait) {
+        margin: 20px auto;
+        font-size: 20px;
+      }
+      @media (min-width: 1366px) and (orientation: landscape) {
+        margin: 20px auto;
+        font-size: 20px;
+      }
+      @media handheld and (min-width: 1366px) and (orientation: landscape) {
+        margin: 20px auto;
+        font-size: 20px;
+      }
+      @media screen and (min-width: 1024px) and (orientation: landscape) {
+        margin: 20px auto;
+        font-size: 18px;
+      }
+    }
+    .button-container {
+      width: 90%;
+      margin: 10px;
+      display: flex;
+      justify-content: space-around;
+      .contact-buttons {
+        height: 40px;
+        width: 70px;
+        background-color: #666;
+        border: none;
+        transition: 0.7s;
+        font-size: 25px;
+        color: #ddd;
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
+        @media (min-width: 1024px) and (orientation: portrait) {
+          height: 55px;
+          width: 85px;
+          border-radius: 50px;
+        }
+        @media (min-width: 1366px) and (orientation: landscape) {
+          height: 55px;
+          width: 85px;
+          border-radius: 50px;
+        }
+        @media handheld and (min-width: 1366px) and (orientation: landscape) {
+          height: 55px;
+          width: 85px;
+          border-radius: 50px;
+        }
+        @media screen and (min-width: 1024px) and (orientation: landscape) {
+          height: 45px;
+          width: 75px;
+          border-radius: 50px;
+          &:hover {
+            background-color: #fff;
+            animation: shake 1s infinite;
+            color: #1f1f1f;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-details {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    z-index: 10;
+    label {
+      color: #666;
+      display: block;
+      width: 90%;
+      text-align: left;
+      margin: 10px auto;
+      height: 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-family: serif;
+      line-height: 50px;
+      @media screen and (min-width: 1024px) and (orientation: landscape) {
+        margin: 10px 0;
+      }
+    }
+    h4 {
+      display: inline-block;
+      padding: 0 10px;
+      color: #ddd;
+      transition: 0.7s;
+      @media screen and (min-width: 1024px) and (orientation: landscape) {
+        color: #666;
+        cursor: pointer;
+        &:hover {
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          color: #ddd;
+          animation: shake 1s infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
