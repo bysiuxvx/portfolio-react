@@ -415,14 +415,20 @@ main {
           transform: scaleX(0);
           transition: transform 0.25s ease-in-out;
         }
-        &:hover::after {
-          transform: scaleX(1);
+        &:hover {
+          .pdf-svg {
+            color: #ff0000;
+          }
+          &:after {
+            transform: scaleX(1);
+          }
         }
       }
       .pdf-svg {
         font-size: 30px;
         text-align: center;
         justify-self: center;
+        transition: 1s;
       }
     }
 
