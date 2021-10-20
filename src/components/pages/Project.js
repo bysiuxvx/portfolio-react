@@ -45,6 +45,7 @@ const Project = (props) => {
               window.open(githubURL, "_blank")
             }}
             onAuxClick={(event) => {
+              event.preventDefault()
               window.open(githubURL, "_blank")
             }}
           />

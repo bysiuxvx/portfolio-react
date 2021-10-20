@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { motion } from "framer-motion"
 import Tippy from "@tippyjs/react"
 import { followCursor } from "tippy.js"
 
-import SvgBootstrap4 from "../../icons/Bootstrap4"
-import SvgDocker from "../../icons/Docker"
-import SvgNextjs2 from "../../icons/Nextjs2"
-import SvgReact2 from "../../icons/React2"
-import SvgRedux from "../../icons/Redux"
-import SvgSass1 from "../../icons/Sass1"
-import SvgTypescript from "../../icons/Typescript"
+import { AiOutlineFilePdf } from "react-icons/ai"
+
+import SvgBootstrap4 from "../../icon-components/Bootstrap4"
+import SvgDocker from "../../icon-components/Docker"
+import SvgNextjs2 from "../../icon-components/Nextjs2"
+import SvgReact2 from "../../icon-components/React2"
+import SvgRedux from "../../icon-components/Redux"
+import SvgSass1 from "../../icon-components/Sass1"
+import SvgTypescript from "../../icon-components/Typescript"
 
 import picture_main from "../../about_pictures/img-7451.jpg"
+import Resume from "../../pdf/pbcv.pdf"
 
 import "tippy.js/dist/tippy.css"
 
@@ -36,21 +39,22 @@ const About = () => {
       // image: SvgNextJs,
       imageAlt: "Next.js logo",
       rating:
-        "I like it, though trying to find something in the code by the text is pure hell XD",
+        "I like it, though trying to find something in the code by the text is pure hell ( ° -°)",
     },
     {
       name: "Redux",
       image: SvgRedux,
       imageAlt: "Redux logo",
       rating:
-        "Love / hate relationship. I wish every Redux project was based on Redux Toolkit, it would be so much clearer ;).",
+        "Love / hate relationship. I wish every Redux project was based on Redux Toolkit, it would be so much clearer ( ͡° ͜ʖ ͡°).",
     },
     {
       name: "Sass",
       image: SvgSass1,
       // image: SvgSass,
       imageAlt: "Sass logo",
-      rating: "10/10, that's the reason why this portfolio is so beautiful ;)",
+      rating:
+        "10/10, that's the reason why this portfolio is so beautiful [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]",
     },
     {
       name: "Docker",
@@ -71,11 +75,11 @@ const About = () => {
 
   const technologies = svgContent.map((technology) => (
     <Tippy
-      content={(technology.name, technology.rating)}
+      content={technology.rating}
       followCursor={true}
       plugins={[followCursor]}
     >
-      <div className="svg-wrapper">
+      <div className="svg-wrapper" key={technology.name}>
         <technology.image className="svg-element" />
       </div>
     </Tippy>
@@ -115,35 +119,34 @@ const About = () => {
               to work creatively, to take part in building things, something I
               never had the chance to do in my career. My previous work focused
               on maintaining systems that already exist. Also routine completely
-              kills my vibe.
+              kills my vibe. Programming is giving me huge amounts of fun and
+              satisfaction. Seeing how something that I wrote myself works is
+              giving me the type of pleasure I haven't felt for a long time.
             </p>
-            <p>
-              I started programming because I wanted to change something in my
-              life and career, I wanted to try out new things. Though the
-              learning process was not always consistent due to the limited time
-              I had.
+            <p className="p-tech">
+              Technologies I am familiar with and work on a daily basis:
             </p>
-            <p>
-              Programming is giving me huge amounts of fun and satisfaction.
-              Seeing how something that I wrote myself works is giving me the
-              type of pleasure I haven't felt for a long time. The only time I
-              get a little bit frustrated is when I can't align some things in
-              the layout. Conceptualizing and styling this page probably took me
-              longer than writing the logic..{" "}
-              <span style={{ whiteSpace: "nowrap" }}>¯\_( ° -°)_/¯</span>
-            </p>
-            <p>Technologies I am familiar with and work on a daily basis:</p>
-            <div className="svg-container">{technologies}</div>
+            <div className="svg-section">
+              <div className="svg-container">{technologies}</div>
+            </div>
             <p>
               My free time I either spend relaxing with my dog, learning
-              something new about front-end, or playing guitar. I used to play
-              in a band and even released two records on vinyl. A year ago I'd
-              probably call myself a bit of a gamer, but because my free time is
-              very limited I prefer spending it on learning stuff. I'm also
-              interested in electronics and taught myself through tutorials to
-              build small devices like guitar effects - most of them worked...
+              something new, or playing guitar. I used to play in a band and
+              even released two records on vinyl. I am also a bit of a gamer.
+              Besides the mentioned, I also interested in electronics and with
+              the help of tutorials I've built small devices like guitar effects
+              - most of them worked...
             </p>
-            <h3>Come on, let me hear from you!</h3>
+            <div className="anchor-container">
+              <a
+                className="resume-anchor"
+                href={Resume}
+                download="Patryk Byszek CV"
+              >
+                Please, grab my resume! <AiOutlineFilePdf className="pdf-svg" />
+              </a>
+            </div>
+            <h3>Let me hear from you!</h3>
           </div>
         </div>
       </motion.div>
