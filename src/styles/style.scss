@@ -312,7 +312,7 @@ main {
   justify-content: center;
   align-items: center;
   color: #fff;
-  background-color: #1f1f1f;
+  background-color: rgba(31, 31, 31, 0.8);
   z-index: 1;
   @media (min-width: 768px) and (orientation: portrait) {
     background-color: transparent;
@@ -352,6 +352,10 @@ main {
     @media (min-width: 768px) {
       padding: 0 0 40px 0;
     }
+    @media (min-width: 1024px) {
+      background-color: rgba(31, 31, 31, 0.6);
+      z-index: 1;
+    }
 
     h2 {
       font-size: 20px;
@@ -360,10 +364,7 @@ main {
       @media (min-width: 768px) and (orientation: portrait) {
         font-size: 22px;
       }
-      @media (min-width: 1024px) and (orientation: portrait) {
-        font-size: 26px;
-      }
-      @media (min-width: 1024px) and (orientation: landscape) {
+      @media (min-width: 1024px) {
         font-size: 26px;
       }
     }
