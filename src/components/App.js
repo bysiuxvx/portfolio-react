@@ -1,14 +1,20 @@
 import { HashRouter as Router } from "react-router-dom"
+import { useState } from "react"
 import Navigation from "./Navigation"
 import Page from "./Page"
 import "../styles/style.scss"
 
-function App() {
+const App = () => {
+  const [introDisplayed, setIntroDisplayed] = useState(false)
+
   return (
     <div className="App">
       <Router>
-        <Navigation />
-        <Page />
+        <Navigation setIntroDisplayed={setIntroDisplayed} />
+        <Page
+          introDisplayed={introDisplayed}
+          setIntroDisplayed={setIntroDisplayed}
+        />
       </Router>
     </div>
   )

@@ -1,10 +1,13 @@
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
 
-const Navigation = () => {
+const Navigation = ({ setIntroDisplayed }) => {
   const [menu, setMenu] = useState(false)
 
-  const handleSetMenu = () => setMenu(!menu)
+  const handleSetMenu = () => {
+    setMenu(!menu)
+    setIntroDisplayed(true)
+  }
 
   const navList = [
     { name: "Home", path: "/", exact: true },

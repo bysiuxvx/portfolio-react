@@ -9,18 +9,18 @@ import ErrorPage from "./pages/ErrorPage"
 import Particles from "react-particles-js"
 import { AnimatePresence } from "framer-motion"
 
-const Page = () => {
-  const [homeDisplayed, setHomeDisplayed] = useState(false)
+const Page = ({ introDisplayed, setIntroDisplayed }) => {
+  // const [homeDisplayed, setHomeDisplayed] = useState(false)
   const history = useHistory()
 
   const location = useLocation()
 
   useEffect(() => {
-    if (homeDisplayed === false) {
+    if (introDisplayed === false) {
       setTimeout(() => {
+        setIntroDisplayed(true)
         history.push("/about")
-        setHomeDisplayed(true)
-      }, 22000)
+      }, 5000)
     } else return
   })
 

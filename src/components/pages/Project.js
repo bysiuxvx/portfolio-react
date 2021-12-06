@@ -14,8 +14,8 @@ const Project = (props) => {
     >
       <div className="projects-container">
         <img
-          src={image}
-          alt={imageAlt}
+          src={image ? image : null}
+          alt={imageAlt ? imageAlt : null}
           onClick={(event) => {
             window.open(liveDemo, "_blank")
           }}

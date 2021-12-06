@@ -4,22 +4,42 @@ import toDoApp from "../../project_pictures/todoapp_fullsize.jpg"
 import weatherApp from "../../project_pictures/weatherapp_fullsize.jpg"
 import passwordGenerator from "../../project_pictures/passwordgenerator_fullsize.jpg"
 import thisPic from "../../project_pictures/this.jpg"
+import unsplashBrowser from "../../project_pictures/unsplash_browser.jpg"
+import bookstore from "../../project_pictures/bookstore.jpg"
 import movieBrowser from "../../project_pictures/movie_browser.jpg"
+
 import { motion } from "framer-motion"
 
 const ProjectsList = () => {
   const projects = [
     {
-      name: "Movie Browser - work in progress",
-      description: `A simple movie browser running the OMDB API created in React. It is working properly already, although the styling is not yet responsive. I first need to figure out how I want this app to look like in the end. Also I am planning to add a favorites list, that will be displayed in a retractable tab.`,
+      name: "Movie Browser",
+      description: `A movie browser running the OMDB API created in React, using Zustand for state management. Interface made with Semantic UI. Includes favorite list and allows users to rate movies. Keeps the data even after reloading the page.`,
       image: movieBrowser,
-      imageAlt: "Movie browser picture",
-      githubURL: "https://github.com/bysiuxvx/movie-browser-react",
-      liveDemo: "https://bysiuxvx.github.io/movie-browser-react/",
+      imageAlt: "Movie browser",
+      githubURL: "https://github.com/bysiuxvx/react-movie-browser",
+      liveDemo: "https://bysiuxvx.github.io/react-movie-browser/",
     },
     {
+      name: "Unsplash image browser",
+      description: `A cool project I did as part of a recruitment process. The app uses Redux, allows storing favorite pictures which are then accessible also after page reload. Cool stuff :)`,
+      image: unsplashBrowser,
+      imageAlt: "Image browser",
+      githubURL: "https://github.com/bysiuxvx/image-search-unsplash",
+      liveDemo: "https://bysiuxvx.github.io/image-search-unsplash/",
+    },
+    {
+      name: "React Typescript Bookstore",
+      description: `Part of recruitment process. Redux State, form validation in the checkout. This was a hard one, but I also enjoyed it and feel that I learned something new too. It's not beautiful though, but that was not the focus.`,
+      image: bookstore,
+      imageAlt: "Bookstore image",
+      githubURL: "https://github.com/bysiuxvx/Bookstore",
+      liveDemo: "https://github.com/bysiuxvx/Bookstore",
+    },
+
+    {
       name: "To Do List",
-      description: `My first React project. Building this application from scratch to final state took me probably around 30 hours over the course of around a week. I have spent a big portion of the time on styling the app, because I didn't like the initial version, and I changed it 2-3 times. I also experimented with different libraries along the way.`,
+      description: `My first React project. I have spent a big portion of the time on styling the app, because I didn't like the initial version, and I changed it 2-3 times. I also experimented with different libraries along the way.`,
       image: toDoApp,
       imageAlt: "To Do list app picture",
       githubURL: "https://github.com/bysiuxvx/ToDoApp-react",
@@ -28,7 +48,7 @@ const ProjectsList = () => {
     {
       name: "Weather app",
       description:
-        "This was the first project I was really satisfied with. Looking back at it, it is very simple, but I like the results, although everyone has different preferences when it comes to UI. It runs the API of OpenWeatherMap.",
+        "Very basic weather app. Not much to say about it, it was one of my first apps where I paid at least a little bit of attention to the optics. It runs the API of OpenWeatherMap.",
       image: weatherApp,
       imageAlt: "Weather app picture",
       githubURL: "https://github.com/bysiuxvx/weather-app",
@@ -37,7 +57,7 @@ const ProjectsList = () => {
     {
       name: "Password generator",
       description:
-        "Just a simple password generator, not much to say about it. Perfect for simple and quick usage! No one is ever going to hack your account or decrypt your important files again with a password from this baby.",
+        "Just a simple password generator. Perfect for simple and quick usage! No one is ever going to hack your account or decrypt your important files again with a password from this baby.",
       image: passwordGenerator,
       imageAlt: "Password generator app picture",
       githubURL: "https://github.com/bysiuxvx/password-generator",
