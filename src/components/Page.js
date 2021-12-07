@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { Route, Switch, useLocation } from "react-router-dom"
 import { useHistory } from "react-router"
 import Home from "./pages/Home"
@@ -10,22 +10,21 @@ import Particles from "react-particles-js"
 import { AnimatePresence } from "framer-motion"
 
 const Page = ({ introDisplayed, setIntroDisplayed }) => {
-  // const [homeDisplayed, setHomeDisplayed] = useState(false)
   const history = useHistory()
 
   const location = useLocation()
 
   useEffect(() => {
-    if (introDisplayed === false) {
-      setTimeout(() => {
-        setIntroDisplayed(true)
-        history.push("/about")
-      }, 5000)
-    } else return
+    const timer = setTimeout(() => {
+      setIntroDisplayed(true)
+      history.push("/about")
+    }, 5000)
+    if (introDisplayed === true) return () => clearTimeout(timer)
   })
 
   return (
     <main>
+      {introDisplayed ? "TRUE" : "FALSE"}
       <Particles
         params={{
           particles: {
