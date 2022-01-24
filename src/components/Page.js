@@ -21,7 +21,7 @@ const Page = ({ introDisplayed, setIntroDisplayed }) => {
     }, 5000)
     if (introDisplayed === true) return () => clearTimeout(timer)
   })
-
+  //
   return (
     <main>
       {introDisplayed ? "TRUE" : "FALSE"}
