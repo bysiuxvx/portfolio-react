@@ -1,4 +1,5 @@
-import { HashRouter as Router } from "react-router-dom"
+// import { HashRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router } from "react-router-dom"
 import { useState } from "react"
 import Navigation from "./Navigation"
 import Page from "./Page"

@@ -1,4 +1,5 @@
 import React from "react"
+
 import { motion } from "framer-motion"
 import Tippy from "@tippyjs/react"
 import { followCursor } from "tippy.js"
@@ -23,7 +24,6 @@ const About = () => {
     {
       name: "React",
       image: SvgReact2,
-      // image: SvgReact,
       imageAlt: "React logo",
       rating: "To be honest? Pure love! :)",
     },
@@ -31,27 +31,25 @@ const About = () => {
       name: "TypeScript",
       image: SvgTypescript,
       imageAlt: "TypeScript logo",
-      rating: "Kinda annoying but I see it's usefulness. ",
+      rating: "Getting used to it, I see it's usefulness.",
     },
     {
       name: "Next.js",
       image: SvgNextjs2,
-      // image: SvgNextJs,
       imageAlt: "Next.js logo",
       rating:
-        "I like it, though trying to find something in the code by the text is pure hell ( ° -°)",
+        "I like it, but if there's localization involved (for example i18n) then working with the text for the app is pure hell ( ° -°)",
     },
     {
       name: "Redux",
       image: SvgRedux,
       imageAlt: "Redux logo",
       rating:
-        "Love / hate relationship. I wish every Redux project was based on Redux Toolkit, it would be so much clearer ( ͡° ͜ʖ ͡°).",
+        "Love / hate relationship. I wish every Redux project was at least based on Redux Toolkit, it would be so much clearer ( ͡° ͜ʖ ͡°)",
     },
     {
       name: "Sass",
       image: SvgSass1,
-      // image: SvgSass,
       imageAlt: "Sass logo",
       rating:
         "10/10, that's the reason why this portfolio is so beautiful [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]",
@@ -66,10 +64,9 @@ const About = () => {
     {
       name: "Bootstrap",
       image: SvgBootstrap4,
-      // image: SvgBootstrap,
       imageAlt: "Bootstrap logo",
       rating:
-        "Haven't worked too much in it, but I like the fact that it allows fast page building.",
+        "Not a big fan of bootstrap, personally I prefer semantic UI, which in my opinion is both prettier and more modern, but also easier to use.",
     },
   ]
 
@@ -118,13 +115,13 @@ const About = () => {
               My reasons for wanting to become a developer are simple - I love
               to work creatively, to take part in building things, something I
               never had the chance to do in my career. My previous work focused
-              on maintaining systems that already exist. Also routine completely
-              kills my vibe. Programming is giving me huge amounts of fun and
-              satisfaction. Seeing how something that I wrote myself works is
-              giving me the type of pleasure I haven't felt for a long time.
+              purely on maintenance. Also routine completely kills my vibe.
+              Programming is giving me huge amounts of fun and satisfaction.
+              Seeing how something that I wrote myself works is giving me the
+              type of pleasure I haven't felt for a long time.
             </p>
             <p className="p-tech">
-              Technologies I am familiar with and work on a daily basis:
+              Technologies I am familiar with and use on a daily basis:
             </p>
             <div className="svg-section">
               <div className="svg-container">{technologies}</div>

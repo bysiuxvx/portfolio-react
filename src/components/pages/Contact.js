@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 
-function Contact() {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

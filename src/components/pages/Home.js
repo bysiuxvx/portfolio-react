@@ -2,7 +2,7 @@ import React from "react"
 import Typewriter from "typewriter-effect"
 import { motion } from "framer-motion"
 
-function Home() {
+const Home = () => {
   return (
     <>
       <motion.div
