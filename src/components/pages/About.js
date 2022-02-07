@@ -25,41 +25,41 @@ const About = () => {
       name: "React",
       image: SvgReact2,
       imageAlt: "React logo",
-      rating: "To be honest? Pure love! :)",
+      rating: "To be honest? Pure love! 🥰",
     },
     {
       name: "TypeScript",
       image: SvgTypescript,
       imageAlt: "TypeScript logo",
-      rating: "Getting used to it, I see it's usefulness.",
+      rating:
+        "Getting used to it, I see it's usefulness. It was a bit frustrating in the beginning due to all the errors, but that's actually the point ot if. And I noticed - I don't repeat those mistakes too often afterwards.",
     },
     {
       name: "Next.js",
       image: SvgNextjs2,
       imageAlt: "Next.js logo",
       rating:
-        "I like it, but if there's localization involved (for example i18n) then working with the text for the app is pure hell ( ° -°)",
+        "I like it, but if there's localization involved (for example i18n) then working with the text for the app is pure hell 😐",
     },
     {
       name: "Redux",
       image: SvgRedux,
       imageAlt: "Redux logo",
       rating:
-        "Love / hate relationship. I wish every Redux project was at least based on Redux Toolkit, it would be so much clearer ( ͡° ͜ʖ ͡°)",
+        "Love / hate relationship. I wish every Redux project was at least based on Redux Toolkit, it would be so much clearer 😵‍💫",
     },
     {
       name: "Sass",
       image: SvgSass1,
       imageAlt: "Sass logo",
-      rating:
-        "10/10, that's the reason why this portfolio is so beautiful [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]",
+      rating: "10/10, that's the reason why this portfolio is so beautiful 🤑",
     },
     {
       name: "Docker",
       image: SvgDocker,
       imageAlt: "Docker logo",
       rating:
-        "I like it when it doesn't cause compatibility and hot reload issues with Windows, which is almost never :D",
+        "I like it when it doesn't cause compatibility and hot reload issues with Windows, which is almost never 😀",
     },
     {
       name: "Bootstrap",
@@ -121,11 +121,17 @@ const About = () => {
               type of pleasure I haven't felt for a long time.
             </p>
             <p className="p-tech">
-              Technologies I am familiar with and use on a daily basis:
+              Technologies I am familiar with and used on a daily basis on my
+              internship:
             </p>
             <div className="svg-section">
               <div className="svg-container">{technologies}</div>
             </div>
+            <p>
+              Apart from the technologies mentioned above, I also experimented
+              with several other frameworks, state management libraries, CSS
+              preprocessors, and backend environments like NodeJS.
+            </p>
             <p>
               My free time I either spend relaxing with my dog, learning
               something new, or playing guitar. I used to play in a band and

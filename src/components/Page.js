@@ -18,9 +18,6 @@ const Page = ({ introDisplayed, setIntroDisplayed }) => {
 
   // useEffect(() => {
   //   const timer = setTimeout(() => {
-  //     console.log("pushing")
-  //   }, 5000)
-  //   return () => {
   //     if (introDisplayed === true) {
   //       clearTimeout(timer)
   //       console.log("cleared")
@@ -28,42 +25,13 @@ const Page = ({ introDisplayed, setIntroDisplayed }) => {
   //       history.push("/about")
   //       setIntroDisplayed(true)
   //     }
-  //   }
-  // })
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      location.pathname.length > 2
-        ? console.log("tak")
-        : // ? clearTimeout(timer)
-          console.log(location.pathname)
-      // history.push("/about")
-      // if (location.pathname.length === 1) {
-      //   // history.push("/about")
-      //   alert("yo")
-      //   setIntroDisplayed(true)
-      // } else {
-      //   setIntroDisplayed(true)
-      //   clearTimeout(timer)
-      // }
-    }, 5000)
-    // return () => {
-    //   clearTimeout(timer)
-    // }
-  }, [])
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIntroDisplayed(true)
-  //     history.push("/about")
   //   }, 5000)
-  //   if (introDisplayed === true) return () => clearTimeout(timer)
-  // })
+  // }, [introDisplayed])
 
   return (
     <main>
-      {introDisplayed ? "TRUEEEEEEEE11111111" : "FALSE00000000000000000000"}{" "}
-      {location.pathname.length}
+      {/* {introDisplayed ? "TRUEEEEEEEE11111111" : "FALSE00000000000000000000"}{" "}
+      {location.pathname.length} */}
       <Particles
         params={{
           particles: {

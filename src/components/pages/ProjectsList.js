@@ -30,7 +30,7 @@ const ProjectsList = () => {
     },
     {
       name: "React Typescript Bookstore",
-      description: `Part of recruitment process. Redux State, form validation in the checkout. This was a hard one, but I also enjoyed it and feel that I learned something new too. It's not beautiful though, but that was not the focus.`,
+      description: `Part of a recruitment process. Redux State, form validation in the checkout. This was a hard one, but I also enjoyed it and feel that I learned something new too. It's not beautiful though, but that was not the focus.`,
       image: bookstore,
       imageAlt: "Bookstore image",
       githubURL: "https://github.com/bysiuxvx/Bookstore",
