@@ -32,7 +32,7 @@ const About = () => {
       image: SvgTypescript,
       imageAlt: "TypeScript logo",
       rating:
-        "Getting used to it, I see it's usefulness. It was a bit frustrating in the beginning due to all the errors, but that's actually the point ot if. And I noticed - I don't repeat those mistakes too often afterwards.",
+        "Getting used to it, I see it's usefulness. It was a bit frustrating in the beginning due to all the errors, but that's actually the point ot if. And I noticed - I don't repeat those mistakes too often afterwards 🤓.",
     },
     {
       name: "Next.js",
@@ -118,7 +118,7 @@ const About = () => {
               purely on maintenance. Also routine completely kills my vibe.
               Programming is giving me huge amounts of fun and satisfaction.
               Seeing how something that I wrote myself works is giving me the
-              type of pleasure I haven't felt for a long time.
+              type of satisfaction I haven't felt for a long time.
             </p>
             <p className="p-tech">
               Technologies I am familiar with and used on a daily basis on my
