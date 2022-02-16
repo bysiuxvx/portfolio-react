@@ -66,7 +66,7 @@ const ProjectsList = () => {
     {
       name: "This website!",
       description:
-        "Even though using React for such a small website seems to be overkill, I decided to do it anyway - I wanted to test my React skills. This is the first time I designed a website mobile first. The projects section in landscape orientation could be better, but that's because I'm not that good at designing yet! I like the mobile / tablet version of the projects section though.",
+        "Even though using React for such a small website seems to be an overkill, I decided to do it anyway. This is the first time I designed a website mobile first. The projects section in landscape orientation could be better, but that's because I'm not that good at designing yet! I like the mobile / tablet version of the projects section though - I got the inspiration from the message clouds from popular messaging apps.",
       image: thisPic,
       imageAlt: "This website picture",
       githubURL: "https://github.com/bysiuxvx/portfolio",

@@ -39,7 +39,7 @@ const About = () => {
       image: SvgNextjs2,
       imageAlt: "Next.js logo",
       rating:
-        "I like it, but if there's localization involved (for example i18n) then working with the text for the app is pure hell 😐",
+        "I like it, especially the simplicity around routing within the framework. But if there's localization involved (for example i18n) then working with the translation json files for the app is pure hell, especially if the project is large 🥴.",
     },
     {
       name: "Redux",
@@ -121,8 +121,8 @@ const About = () => {
               type of satisfaction I haven't felt for a long time.
             </p>
             <p className="p-tech">
-              Technologies I am familiar with and used on a daily basis on my
-              internship:
+              Technologies I am familiar with and used during my commercial
+              experience:
             </p>
             <div className="svg-section">
               <div className="svg-container">{technologies}</div>
@@ -130,7 +130,8 @@ const About = () => {
             <p>
               Apart from the technologies mentioned above, I also experimented
               with several other frameworks, state management libraries, CSS
-              preprocessors, and backend environments like NodeJS.
+              preprocessors, backend environments like NodeJS and database
+              platforms such as Firebase.
             </p>
             <p>
               My free time I either spend relaxing with my dog, learning
